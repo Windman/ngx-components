@@ -1,5 +1,5 @@
 export default {
-    input: './dist/library/index.js',
+    input: './dist/library/angular-controls.module.js',
     output: {
         file: 'dist/bundles/angular-controls.bundle.js',
         format: 'umd',
