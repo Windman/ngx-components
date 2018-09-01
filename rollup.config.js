@@ -1,7 +1,7 @@
 export default {
     input: './dist/library/index.js',
     output: {
-        file: 'dist/bundles/mk-angular-controls.umd.js',
+        file: 'dist/bundles/angular-controls.bundle.js',
         format: 'umd',
         sourceMap: false,
         name: 'mk.angular.controls',

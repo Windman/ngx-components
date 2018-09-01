@@ -2,6 +2,9 @@
   "name": "mk-dropdown",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "angular-controls.bundle.js",
+  "module": "angular-controls.module.js",
+  "jsnext:main": "angular-controls.module.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +18,7 @@
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/mk-angular-controls.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/mk-angular-controls.umd.min.js",
     "build": "npm run clean && npm run transpile && npm run package",
-    "test:build": "npm run transpile && npm run package"
+    "test:build": "npm run transpile:test && npm run package"
   },
   "private": true,
   "dependencies": {
