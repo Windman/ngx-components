@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "declaration": true,
+      "stripInternal": true,
+      "experimentalDecorators": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "module": "es2015",
+      "moduleResolution": "node",
+      "paths": {
+        "@angular/core": ["node_modules/@angular/core"],
+        "rxjs/*": ["node_modules/rxjs/*"]
+      },
+      "rootDir": ".",
+      "outDir": "../dist",
+      "sourceMap": true,
+      "inlineSources": true,
+      "target": "es5",
+      "skipLibCheck": true,
+      "lib": [
+        "es2015", 
+        "dom"
+      ]
+    },
+    "files": [
+      "./library/index.ts"
+    ],
+    "angularCompilerOptions": {
+      "skipTemplateCodegen": true,
+      "strictMetadataEmit": false
+    }
+  }
+
+/* Helper
+"paths" to other modules you use are needed, as the final bundle won’t include them directly (more on that later).
+"angularCompilerOptions": { "strictMetadataEmit": true } is needed to be AoT compatible.
+"declaration": true is important to generate type definitions files, so the user will have Intellisense for your module.
+"noImplicitAny": true and "strictNullChecks": true are recommended to avoid errors, and to be compatible with all user configurations. "noImplicitAny": true must be respected since Angular 4.0, and "strictNullChecks": true starting from Angular 4.1.
+"module": "es2015" is important for performance, and "sourceMap": true for debugging, but nothing specific here.
+"stripInternal": true avoid useless declarations for internal APIs and "skipLibCheck": true avoid being blocked by (harmless) errors in the librairies you use.
+*/
