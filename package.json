@@ -18,7 +18,7 @@
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/mk-angular-controls.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/mk-angular-controls.umd.min.js",
     "build": "npm run clean && npm run transpile && npm run package",
-    "test:build": "npm run clean && npm run transpile:test && npm run package"
+    "build:test": "npm run clean && npm run transpile:test && npm run package"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +40,7 @@
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.2.1",
     "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^5.0.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
