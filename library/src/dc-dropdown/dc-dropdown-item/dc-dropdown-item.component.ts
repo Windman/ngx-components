@@ -2,8 +2,10 @@ import { Component, OnInit, Input, ChangeDetectionStrategy, EventEmitter, Output
 
 @Component({
   selector: 'lib-dc-dropdown-item',
-  templateUrl: './dc-dropdown-item.component.html',
-  styleUrls: ['./dc-dropdown-item.component.scss'],
+  // templateUrl: './dc-dropdown-item.component.html', // enableResourceInlining не работает из коробки
+  // styleUrls: ['./dc-dropdown-item.component.css'],
+  template: `<ng-container key="option-item"
+  [context]="context"></ng-container>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DcDropdownItemComponent implements OnInit {

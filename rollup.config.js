@@ -1,19 +1,18 @@
-import uglify      	from 'rollup-plugin-uglify';
-
+//import uglify      	from 'rollup-plugin-uglify';
 // import rollup      	from 'rollup';
 // import nodeResolve 	from 'rollup-plugin-node-resolve';
 // import commonjs    	from 'rollup-plugin-commonjs';
 // import builtins 	    from 'rollup-plugin-node-builtins';
 // import json          from 'rollup-plugin-json';
-// import globals  	    from 'rollup-plugin-node-globals';
+import globals  	    from 'rollup-plugin-node-globals';
 
 export default {
-    input: './dist/ng-controls/library/src/ng-controls.module.js',
+    input: './dist/ng-controls/ng-controls.module.js',
     output: {
-        file: 'dist/bundles/ng-controls.bundle.umd.js',
+        file: 'dist/bundles/ng-controls.js',
         format: 'umd',
         sourceMap: false,
-        name: 'mk.angular.controls',
+        name: 'ng.controls',
         globals: {
             '@angular/core':                  'ng.core',
             '@angular/common':                'ng.common',
@@ -25,7 +24,7 @@ export default {
             'rxjs/add/observable/of':         'Rx.Observable'
         }
     },
-    plugins: [
+    plugins: [ globals()
       //uglify()
   ]
 };

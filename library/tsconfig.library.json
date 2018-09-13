@@ -14,14 +14,15 @@
     ]
   },
   "files": [
-    "./src/ng-controls.module.ts"
+    "./src/index.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": true, //Не генериуем ngfactories, для экспорта в NPM
     "strictMetadataEmit": true,  //Генерировать ошибки в момент компиляции (для обеспечения совместимости с AOT)
-    "fullTemplateTypeCheck": true, //Проверять как биндятся свойства из компонента с темплейтом, правильно или нет.
-    "enableResourceInlining": true, //Содержимое templateUrl, styleUrls будет записано как template, styles (inlined)
+    //"fullTemplateTypeCheck": true, //Проверять как биндятся свойства из компонента с темплейтом, правильно или нет.
+    //"enableResourceInlining": true, //Содержимое templateUrl, styleUrls будет записано как template, styles (inlined)
     "strictInjectionParameters": true, //Поднимать исключение если @Injected тип был не определен
+    "annotateForClosureCompiler": true
   }
 }
 

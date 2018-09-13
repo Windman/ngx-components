@@ -15,7 +15,7 @@
     "clean": "npm run rimraf -- ./dist/*",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/mk-angular-controls.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/mk-angular-controls.umd.min.js",
-    "build": "npm run clean && npm run transpile && npm run package",
+    "build": "ng build --aot",
     "ngc:lib": "ngc -p library/tsconfig.library.json",
     "build:lib": "npm run clean && npm run ngc:lib && npm run package"
   },
@@ -62,7 +62,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3",
+    "typescript": "~2.9.2",
     "uglify-js": "^3.4.9"
   }
 }
