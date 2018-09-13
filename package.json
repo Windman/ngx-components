@@ -13,12 +13,11 @@
     "e2e": "ng e2e",
     "rimraf": "./node_modules/.bin/rimraf",
     "clean": "npm run rimraf -- ./dist/*",
-    "transpile": "ngc -p src/tsconfig.library.json",
-    "transpile:test": "ngc -p src/tsconfig.library.test.json",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/mk-angular-controls.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/mk-angular-controls.umd.min.js",
     "build": "npm run clean && npm run transpile && npm run package",
-    "build:test": "npm run clean && npm run transpile:test && npm run package"
+    "ngc:lib": "ngc -p library/tsconfig.library.json",
+    "build:lib": "npm run clean && npm run ngc:lib && npm run package"
   },
   "private": true,
   "dependencies": {

@@ -1,3 +1,13 @@
-<app-dropdown></app-dropdown>
+<lib-dc-dropdown [label]="label"
+                 [options]="options"
+                 (optionSelected)="onSelect($event)">
+</lib-dc-dropdown>
+
+<ng-template identity="dbsv-chain-advanced-item"
+             let-$item>
+  <div class="test-option" (click)="$item.setValue($item.option, $item.option.label)">
+    <span class="column-label">{{$item.option.label}}</span>
+  </div>
+</ng-template>
 
 

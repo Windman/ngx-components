@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AngularControlsModule } from 'angular-controls';
+import { NgControlsModule } from 'ng-controls';
 
 import { AppComponent } from './app.component';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AngularControlsModule
+    NgControlsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

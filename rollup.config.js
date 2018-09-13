@@ -5,12 +5,12 @@ import uglify      	from 'rollup-plugin-uglify';
 // import commonjs    	from 'rollup-plugin-commonjs';
 // import builtins 	    from 'rollup-plugin-node-builtins';
 // import json          from 'rollup-plugin-json';
-//import globals  	  from 'rollup-plugin-node-globals';
+// import globals  	    from 'rollup-plugin-node-globals';
 
 export default {
-    input: './dist/library/angular-controls.module.js',
+    input: './dist/ng-controls/library/src/ng-controls.module.js',
     output: {
-        file: 'dist/bundles/angular-controls.bundle.js',
+        file: 'dist/bundles/ng-controls.bundle.umd.js',
         format: 'umd',
         sourceMap: false,
         name: 'mk.angular.controls',

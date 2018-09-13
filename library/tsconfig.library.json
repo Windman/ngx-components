@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "outDir": "../dist/ng-controls",
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "files": [
+    "./src/ng-controls.module.ts"
+  ],
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true, //Не генериуем ngfactories, для экспорта в NPM
+    "strictMetadataEmit": true,  //Генерировать ошибки в момент компиляции (для обеспечения совместимости с AOT)
+    "fullTemplateTypeCheck": true, //Проверять как биндятся свойства из компонента с темплейтом, правильно или нет.
+    "enableResourceInlining": true, //Содержимое templateUrl, styleUrls будет записано как template, styles (inlined)
+    "strictInjectionParameters": true, //Поднимать исключение если @Injected тип был не определен
+  }
+}
+
+/* Helper
+AOT compiler https://angular.io/guide/aot-compiler
+
+"paths" to other modules you use are needed, as the final bundle won’t include them directly (more on that later).
+"declaration": true is important to generate type definitions files, so the user will have Intellisense for your module.
+"noImplicitAny": true and "strictNullChecks": true are recommended to avoid errors, and to be compatible with all user configurations. "noImplicitAny": true must be respected since Angular 4.0, and "strictNullChecks": true starting from Angular 4.1.
+"module": "es2015" is important for performance, and "sourceMap": true for debugging, but nothing specific here.
+"stripInternal": true avoid useless declarations for internal APIs and "skipLibCheck": true avoid being blocked by (harmless) errors in the librairies you use.
+*/
